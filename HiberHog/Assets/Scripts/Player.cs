@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
     private PlayerControls playerControls;
 
     public int speed = 5;
-    public int DashSpeed = 10;
+    public float DashForce = 1f;
+    public Rigidbody rb;
 
     private void Awake()
     {
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour
 
   public void Dash()
     {
-        gameObject.transform.Translate(DashSpeed * Time.deltaTime, 0, 0);
+        rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
         
     }
 }
