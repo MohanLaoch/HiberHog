@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
 {
     private PlayerControls playerControls;
 
-    public int speed = 5; 
+    public int speed = 5;
+    public int DashSpeed = 10;
 
     private void Awake()
     {
@@ -26,6 +27,13 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        bool Spacekey = playerControls.Player.Dash.ReadValue<float>() > 0.1f;
+
+        if (Spacekey)
+        {
+            Dash();
+
+        }
         float x = playerControls.Player.Horizontal.ReadValue<float>();
 
         float z = playerControls.Player.Vertical.ReadValue<float>();
@@ -33,5 +41,12 @@ public class Player : MonoBehaviour
         transform.Translate(speed * x * Time.deltaTime, 0, 0);
 
         transform.Translate(0, 0, speed * z * Time.deltaTime);
+
+    }
+
+  public void Dash()
+    {
+        gameObject.transform.Translate(DashSpeed * Time.deltaTime, 0, 0);
+        
     }
 }
