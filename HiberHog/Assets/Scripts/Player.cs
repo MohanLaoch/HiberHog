@@ -35,17 +35,20 @@ public class Player : MonoBehaviour
             Dash();
 
         }
+
+
         float x = playerControls.Player.Horizontal.ReadValue<float>();
 
         float z = playerControls.Player.Vertical.ReadValue<float>();
 
         transform.Translate(speed * x * Time.deltaTime, 0, 0);
+        transform.Rotate(0, x / speed, 0);
 
         transform.Translate(0, 0, speed * z * Time.deltaTime);
 
     }
 
-  public void Dash()
+    public void Dash()
     {
         rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
         
