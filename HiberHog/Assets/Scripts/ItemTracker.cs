@@ -4,21 +4,40 @@ using UnityEngine;
 
 public class ItemTracker : MonoBehaviour
 {
+    public string foodTag;
     public string enemyTag;
-    public GameObject[] collectedItems;
-    
+
+    public List<GameObject> collectedItems = new List<GameObject>();
+
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            /*foreach (var i )
+            {
+                Instantiate(collectedItems, new Vector3(1, 1, 1), Quaternion.identity);
+            }*/
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == foodTag)
+        {
+            collectedItems.Add(other.gameObject);
+            // add it to the collectedItems list
+        }
+
         if (other.gameObject.tag == enemyTag)
         {
-
+            // foreach loop to instantiate all the items randomly around the player
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
     }
 }
 
