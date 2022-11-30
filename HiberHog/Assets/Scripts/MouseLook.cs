@@ -19,6 +19,7 @@ public class MouseLook : MonoBehaviour
 
     void Start()
     {
+        //Cursor.visible = false;
         cameraOffset = transform.position - playerTransform.position;
     }
 
