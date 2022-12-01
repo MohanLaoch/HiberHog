@@ -8,8 +8,9 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
 
     public Transform player;
+    public Transform food;
 
-    public LayerMask Ground, Player;
+    public LayerMask Ground, Player, Food, CollectedFood;
 
 
     public Vector3 walkPoint;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
 
     public float sightRange;
     public bool PlayerInSightRange;
+    public bool FoodInSightRange;
 
     private void Awake()
     {
@@ -37,6 +39,13 @@ public class Enemy : MonoBehaviour
         if (PlayerInSightRange)
         {
             ChasePlayer();
+        }
+
+       FoodInSightRange = Physics.CheckSphere(transform.position, sightRange, Food);
+
+        if (FoodInSightRange)
+        {
+            ChaseFood();
         }
     }
 
@@ -77,6 +86,12 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(player.position);
         transform.LookAt(player);
 
+    }
+
+    public void ChaseFood()
+    {
+        agent.SetDestination(food.position);
+        transform.LookAt(food);
     }
 
     private void OnDrawGizmosSelected()
