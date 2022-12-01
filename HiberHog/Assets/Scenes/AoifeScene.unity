@@ -411,21 +411,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hedgehog2
       objectReference: {fileID: 0}
+    - target: {fileID: 3478775437836936978, guid: 1336b477a74ac614eb0a3db780ec9c04, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3478775437836936979, guid: 1336b477a74ac614eb0a3db780ec9c04, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3478775437836936979, guid: 1336b477a74ac614eb0a3db780ec9c04, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.841283
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3478775437836936979, guid: 1336b477a74ac614eb0a3db780ec9c04, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.633003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3478775437836936979, guid: 1336b477a74ac614eb0a3db780ec9c04, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.9270802
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3478775437836936979, guid: 1336b477a74ac614eb0a3db780ec9c04, type: 3}
       propertyPath: m_LocalRotation.w
