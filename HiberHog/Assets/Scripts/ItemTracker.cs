@@ -9,35 +9,40 @@ public class ItemTracker : MonoBehaviour
 
     public List<GameObject> collectedItems = new List<GameObject>();
 
+    public float spawnRadius = 1f;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            /*foreach (var i )
-            {
-                Instantiate(collectedItems, new Vector3(1, 1, 1), Quaternion.identity);
-            }*/
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == foodTag)
         {
+            // add it to the collectedItems list and set it to inactive
             collectedItems.Add(other.gameObject);
-            // add it to the collectedItems list
+            other.gameObject.SetActive(false);
         }
 
         if (other.gameObject.tag == enemyTag)
         {
-            // foreach loop to instantiate all the items randomly around the player
+            // for every item in the list set its transform to be randomly near the player and active
+            for (int i = 0; i < collectedItems.Count; i++)
+            {
+                //Instantiate(collectedItems[i], new Vector3(1, 1, 1), Quaternion.identity);
+                collectedItems[i].transform.position = 
+                    new Vector3(Random.Range(transform.position.x - spawnRadius, transform.position.x + spawnRadius), transform.position.y + 1, Random.Range(transform.position.z -spawnRadius, transform.position.z + spawnRadius));
+                collectedItems[i].SetActive(true);
+                
+            }
         }
     }
 
-    void OnDrawGizmos()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, spawnRadius);
     }
 }
 
@@ -56,5 +61,5 @@ public class ItemTracker : MonoBehaviour
  * either way both would require the dropped gameObject to have a new layer of "DroppedByPlayer" or something like that so the enemy creatures could pick them up
  * this would potentially also require any gameObject picked up by the player to have its layer changed back (or maybe not, depending on how it all works)
  * 
- * I want to try do 2 because it seems far more efficient than one
+ * I want to try do 2 because it seems far more efficient than one 
  */
