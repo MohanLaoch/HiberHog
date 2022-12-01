@@ -591,6 +591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4551029959474055890, guid: 70ac0137ebd34744fbbbd8f739eb3406, type: 3}
+      propertyPath: RotSpeed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 70ac0137ebd34744fbbbd8f739eb3406, type: 3}

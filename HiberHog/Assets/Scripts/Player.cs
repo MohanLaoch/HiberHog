@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private PlayerControls playerControls;
 
     public int speed = 5;
+    public int RotSpeed = 20;
     public float DashForce = 1f;
     public Rigidbody rb;
 
@@ -37,13 +38,13 @@ public class Player : MonoBehaviour
         }
 
 
-        float x = playerControls.Player.Horizontal.ReadValue<float>();
+       // float x = playerControls.Player.Horizontal.ReadValue<float>();
 
         float z = playerControls.Player.Vertical.ReadValue<float>();
 
-        transform.Translate(speed * x * Time.deltaTime, 0, 0);
-        transform.Rotate(0, x / speed, 0);
+        float rotateDirection = playerControls.Player.Rotate.ReadValue<float>();
 
+        transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * rotateDirection);
         transform.Translate(0, 0, speed * z * Time.deltaTime);
 
     }
