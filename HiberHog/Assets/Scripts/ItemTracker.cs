@@ -25,7 +25,8 @@ public class ItemTracker : MonoBehaviour
                 // add it to the collectedItems list and set it to inactive
                 collectedItems.Add(other.gameObject);
                 other.gameObject.layer = LayerFood;
-                other.gameObject.AddComponent<Rigidbody>();
+                if (other.gameObject.GetComponent<Rigidbody>() == null)
+                    other.gameObject.AddComponent<Rigidbody>();                
                 other.gameObject.SetActive(false);
             }
         }
