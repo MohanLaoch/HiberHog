@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 563718328}
   - component: {fileID: 563718327}
   - component: {fileID: 563718326}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OhTheMysery
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -768,6 +768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube2
       objectReference: {fileID: 0}
+    - target: {fileID: 2651107373860926903, guid: 6053900ebce80e44a808cef085a010fe, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6053900ebce80e44a808cef085a010fe, type: 3}
@@ -939,6 +943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube1
       objectReference: {fileID: 0}
+    - target: {fileID: 6691370844218456965, guid: 4757bbe07a4fde648acef6ab516ff1ee, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6691370844218456969, guid: 4757bbe07a4fde648acef6ab516ff1ee, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1016,5 +1024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodTag: Food
   enemyTag: Enemy
-  collectedItems: []
   spawnRadius: 5
+  maxItems: 2
+  collectedItems: []

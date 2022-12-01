@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class ItemTracker : MonoBehaviour
 {
-    public string foodTag;
-    public string enemyTag;
-
-    public List<GameObject> collectedItems = new List<GameObject>();
+    public string foodTag, enemyTag;
 
     public float spawnRadius = 1f;
 
-    void Update()
-    {
-        
-    }
+    [Header("Items")]
+    public int maxItems;
+
+    public List<GameObject> collectedItems = new List<GameObject>();
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == foodTag)
         {
-            // add it to the collectedItems list and set it to inactive
-            collectedItems.Add(other.gameObject);
-            other.gameObject.SetActive(false);
+            if (collectedItems.Count < maxItems)
+            {
+                int LayerFood = LayerMask.NameToLayer("Food");
+
+                // add it to the collectedItems list and set it to inactive
+                collectedItems.Add(other.gameObject);
+                other.gameObject.layer = LayerFood;
+                other.gameObject.SetActive(false);
+            }
         }
 
         if (other.gameObject.tag == enemyTag)
@@ -30,12 +33,15 @@ public class ItemTracker : MonoBehaviour
             // for every item in the list set its transform to be randomly near the player and active
             for (int i = 0; i < collectedItems.Count; i++)
             {
-                //Instantiate(collectedItems[i], new Vector3(1, 1, 1), Quaternion.identity);
+                int LayerCollectedFood = LayerMask.NameToLayer("Collected Food");
+
                 collectedItems[i].transform.position = 
                     new Vector3(Random.Range(transform.position.x - spawnRadius, transform.position.x + spawnRadius), transform.position.y + 1, Random.Range(transform.position.z -spawnRadius, transform.position.z + spawnRadius));
                 collectedItems[i].SetActive(true);
-                
+                collectedItems[i].layer = LayerCollectedFood;  
             }
+
+            collectedItems.Clear();
         }
     }
 
