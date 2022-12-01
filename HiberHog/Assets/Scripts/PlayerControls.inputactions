@@ -33,11 +33,38 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Protect",
+                    "type": "Button",
+                    "id": "b82fee2d-7c03-48a7-8e69-746292da5f33",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Rotate",
                     "type": "Value",
                     "id": "79040136-cc85-4ff3-8956-483a190c5064",
                     "expectedControlType": "Axis",
                     "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "01eb2184-3cbd-48a4-be74-26a815be2f5b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Zoom",
+                    "type": "Value",
+                    "id": "aedd9e02-e09a-45e6-b0ba-5de9068a1c66",
+                    "expectedControlType": "Axis",
+                    "processors": "Clamp(min=-0.1,max=0.1),Invert",
                     "interactions": "",
                     "initialStateCheck": true
                 }
@@ -112,7 +139,7 @@
                 {
                     "name": "",
                     "id": "78267efb-6985-4d96-8009-93e0dd90066b",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -152,6 +179,39 @@
                     "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "67037b4e-7919-4ff9-84b1-37fe265c6c60",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e8bf1126-66df-46ef-8960-b30b451da41b",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2641d4b-82d4-40ef-b1ee-97ebe7376619",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Protect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
