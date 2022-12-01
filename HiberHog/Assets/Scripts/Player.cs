@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
 
         float rotateDirection = playerControls.Player.Rotate.ReadValue<float>();
 
+       // transform.Translate(speed * x * Time.deltaTime, 0, 0);
         transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * rotateDirection);
         transform.Translate(0, 0, speed * z * Time.deltaTime);
 
