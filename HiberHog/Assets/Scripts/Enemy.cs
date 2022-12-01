@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    private List <GameObject> Foods = new List <GameObject> ();
     public NavMeshAgent agent;
 
     public Transform player;
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         PlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, Player);
+        FoodInSightRange = Physics.CheckSphere(transform.position, sightRange, CollectedFood);
 
         if (!PlayerInSightRange)
         {
@@ -41,12 +43,13 @@ public class Enemy : MonoBehaviour
             ChasePlayer();
         }
 
-       FoodInSightRange = Physics.CheckSphere(transform.position, sightRange, CollectedFood);
-
-        if (FoodInSightRange)
+        if(FoodInSightRange && PlayerInSightRange)
         {
             ChaseFood();
         }
+        
+
+
     }
 
     private void Patrolling()
@@ -90,6 +93,8 @@ public class Enemy : MonoBehaviour
 
     public void ChaseFood()
     {
+      
+
         agent.SetDestination(food.position);
         transform.LookAt(food);
     }
