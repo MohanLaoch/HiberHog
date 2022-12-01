@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ItemTracker : MonoBehaviour
 {
-    public string foodTag, enemyTag;
+    public string foodTag, enemyTag, nestTag;
 
     public float spawnRadius = 1f;
 
     [Header("Items")]
+    public int nestedFood;
     public int maxItems;
 
     public List<GameObject> collectedItems = new List<GameObject>();
@@ -24,6 +25,7 @@ public class ItemTracker : MonoBehaviour
                 // add it to the collectedItems list and set it to inactive
                 collectedItems.Add(other.gameObject);
                 other.gameObject.layer = LayerFood;
+                other.gameObject.AddComponent<Rigidbody>();
                 other.gameObject.SetActive(false);
             }
         }
@@ -38,9 +40,24 @@ public class ItemTracker : MonoBehaviour
                 collectedItems[i].transform.position = 
                     new Vector3(Random.Range(transform.position.x - spawnRadius, transform.position.x + spawnRadius), transform.position.y + 1, Random.Range(transform.position.z -spawnRadius, transform.position.z + spawnRadius));
                 collectedItems[i].SetActive(true);
-                collectedItems[i].layer = LayerCollectedFood;  
+                collectedItems[i].layer = LayerCollectedFood;
             }
 
+            // reset the items list
+            collectedItems.Clear();
+        }
+
+        if (other.gameObject.tag == nestTag)
+        {
+            // take the amount of items in the list and add to nest item amount 
+            nestedFood = collectedItems.Count;
+
+            for (int j = 0; j < collectedItems.Count; j++)
+            {
+                Destroy(collectedItems[j]);
+            }
+
+            // reset the items list
             collectedItems.Clear();
         }
     }
