@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Food
-  - CollectedFood
+  - Nest
   layers:
   - Default
   - TransparentFX
