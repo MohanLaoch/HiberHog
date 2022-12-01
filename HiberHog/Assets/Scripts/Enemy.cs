@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
             ChasePlayer();
         }
 
-       FoodInSightRange = Physics.CheckSphere(transform.position, sightRange, Food);
+       FoodInSightRange = Physics.CheckSphere(transform.position, sightRange, CollectedFood);
 
         if (FoodInSightRange)
         {
@@ -93,6 +93,8 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(food.position);
         transform.LookAt(food);
     }
+
+    
 
     private void OnDrawGizmosSelected()
     {
