@@ -448,6 +448,7 @@ MonoBehaviour:
   DashForce: 1
   rb: {fileID: 1528096182295891065}
   shieldTimer: 1
+  knockBack: 100
   hog: {fileID: 3855539977450751709}
   shieldHog:
   - {fileID: 8637408841464781174}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerScript : MonoBehaviour
+public class Player : MonoBehaviour
 {
     private PlayerControls playerControls;
 
@@ -15,12 +15,9 @@ public class PlayerScript : MonoBehaviour
 
     [Header("Shielding")]
     public int shieldTimer = 1;
-    public float knockBack = 20f;
     public GameObject hog;
     public GameObject[] shieldHog;
 
-    [HideInInspector]
-    public bool isShielding = false;
 
     private BoxCollider boxCol;
 
@@ -82,7 +79,7 @@ public class PlayerScript : MonoBehaviour
 
     IEnumerator Shield()
     {
-        isShielding = true;
+        
 
         playerControls.Disable();
 
@@ -106,6 +103,7 @@ public class PlayerScript : MonoBehaviour
 
         playerControls.Enable();
 
-        isShielding = true;
+        
+
     }
 }
