@@ -36,7 +36,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("BackgroundTheme");
+        Play("ForestAmbience");
+        Play("Music");
     }
 
     public void Play(string name)
