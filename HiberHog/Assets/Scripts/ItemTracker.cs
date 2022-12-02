@@ -37,7 +37,9 @@ public class ItemTracker : MonoBehaviour
         {
             if (player.isShielding == true)
             {
-                // add force to the enemy
+                Rigidbody enemyRb = other.gameObject.GetComponent<Rigidbody>();
+                enemyRb.AddForce(transform.up * player.knockBack);
+
             }
             else
             {
