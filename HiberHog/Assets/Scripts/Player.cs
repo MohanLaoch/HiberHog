@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject hog;
     public GameObject[] shieldHog;
 
+    [HideInInspector]
     public bool isShielding = false;
 
     private BoxCollider boxCol;
