@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ItemTracker : MonoBehaviour
 {
     public PlayerScript player;
+
+    public TMP_Text foodText;
 
     public string foodTag, enemyTag, nestTag;
 
@@ -15,6 +18,11 @@ public class ItemTracker : MonoBehaviour
     public int maxItems;
 
     public List<GameObject> collectedItems = new List<GameObject>();
+
+    private void Update()
+    {
+        foodText.text = "Food:" + collectedItems.Count + "/" + maxItems;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

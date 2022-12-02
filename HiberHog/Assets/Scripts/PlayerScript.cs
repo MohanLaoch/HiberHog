@@ -42,6 +42,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
+
         bool Shiftkey = playerControls.Player.Dash.ReadValue<float>() > 0.1f;
 
         if (Shiftkey)
