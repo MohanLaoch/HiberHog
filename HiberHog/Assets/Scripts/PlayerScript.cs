@@ -2,27 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerScript : MonoBehaviour
 {
     private PlayerControls playerControls;
 
     [Header("Movement")]
+    public Rigidbody rb;
     public int speed = 5;
     public int RotSpeed = 20;
     public float DashForce = 1f;
-    public Rigidbody rb;
+    public float dashCooldownTime;
+    private float dashCooldownTimer;
+    private bool dashIsCooldown = false;
 
     [Header("Shielding")]
     public int shieldTimer = 1;
+    public float shieldCooldownTime;
+    private float shieldCooldownTimer;
     public float knockBack = 20f;
     public GameObject hog;
     public GameObject[] shieldHog;
+
+    private bool shieldIsCooldown = false;
 
     [HideInInspector]
     public bool isShielding = false;
 
     private BoxCollider boxCol;
+
+    [Header("AbilityUI")]
+    public Image shieldCooldown;
+    public Image dashCooldown;
+    public TMP_Text shieldText;
+    public TMP_Text dashText;
+
+    private void Start()
+    {
+        shieldText.gameObject.SetActive(false);
+        shieldCooldown.fillAmount = 0.0f;
+        dashText.gameObject.SetActive(false);
+        dashCooldown.fillAmount = 0.0f;
+    }
 
     private void Awake()
     {
@@ -50,11 +73,21 @@ public class PlayerScript : MonoBehaviour
             Dash();
         }
 
+        if (dashIsCooldown)
+        {
+            ApplyDashCooldown();
+        }
+
         bool Space = playerControls.Player.Protect.ReadValue<float>() > 0.1f;
 
         if (Space)
         {
             Protect();
+        }
+
+        if (shieldIsCooldown)
+        {
+            ApplyShieldCooldown();
         }
 
 
@@ -72,13 +105,70 @@ public class PlayerScript : MonoBehaviour
 
     public void Dash()
     {
-        rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
+
+        if (dashIsCooldown)
+        {
+            return;
+        }
+        else
+        {
+            dashIsCooldown = true;
+            dashText.gameObject.SetActive(true);
+            dashCooldownTimer = dashCooldownTime;
+
+            rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
+        }
         
     }
 
     public void Protect()
     {
-        StartCoroutine(Shield());
+        if (shieldIsCooldown)
+        {
+            return;
+        }
+        else
+        {
+            shieldIsCooldown = true;
+            shieldText.gameObject.SetActive(true);
+            shieldCooldownTimer = shieldCooldownTime;
+
+            StartCoroutine(Shield());
+        }
+    }
+
+    void ApplyShieldCooldown()
+    {
+        shieldCooldownTimer -= Time.deltaTime;
+
+        if(shieldCooldownTimer < 0.0f)
+        {
+            shieldIsCooldown = false;
+            shieldText.gameObject.SetActive(false);
+            shieldCooldown.fillAmount = 0.0f;
+        }
+        else
+        {
+            shieldText.text = Mathf.RoundToInt(shieldCooldownTimer).ToString();
+            shieldCooldown.fillAmount = shieldCooldownTimer / shieldCooldownTime;
+        }
+    }
+
+    void ApplyDashCooldown()
+    {
+        dashCooldownTimer -= Time.deltaTime;
+
+        if (dashCooldownTimer < 0.0f)
+        {
+            dashIsCooldown = false;
+            dashText.gameObject.SetActive(false);
+            dashCooldown.fillAmount = 0.0f;
+        }
+        else
+        {
+            dashText.text = Mathf.RoundToInt(dashCooldownTimer).ToString();
+            dashCooldown.fillAmount = dashCooldownTimer / dashCooldownTime;
+        }
     }
 
     IEnumerator Shield()
