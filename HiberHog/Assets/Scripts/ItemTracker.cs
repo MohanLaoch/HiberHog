@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ItemTracker : MonoBehaviour
 {
+    public PlayerScript player;
+
     public string foodTag, enemyTag, nestTag;
 
     public float spawnRadius = 1f;
@@ -33,19 +35,27 @@ public class ItemTracker : MonoBehaviour
 
         if (other.gameObject.tag == enemyTag)
         {
-            // for every item in the list set its transform to be randomly near the player and active
-            for (int i = 0; i < collectedItems.Count; i++)
+            if (player.isShielding == true)
             {
-                int LayerCollectedFood = LayerMask.NameToLayer("Collected Food");
-
-                collectedItems[i].transform.position = 
-                    new Vector3(Random.Range(transform.position.x - spawnRadius, transform.position.x + spawnRadius), transform.position.y + 1, Random.Range(transform.position.z -spawnRadius, transform.position.z + spawnRadius));
-                collectedItems[i].SetActive(true);
-                collectedItems[i].layer = LayerCollectedFood;
+                // add force to the enemy
             }
+            else
+            {
+                // for every item in the list set its transform to be randomly near the player and active
+                for (int i = 0; i < collectedItems.Count; i++)
+                {
+                    int LayerCollectedFood = LayerMask.NameToLayer("Collected Food");
 
-            // reset the items list
-            collectedItems.Clear();
+                    collectedItems[i].transform.position =
+                        new Vector3(Random.Range(transform.position.x - spawnRadius, transform.position.x + spawnRadius), transform.position.y + 1, Random.Range(transform.position.z - spawnRadius, transform.position.z + spawnRadius));
+                    collectedItems[i].SetActive(true);
+                    collectedItems[i].layer = LayerCollectedFood;
+                }
+
+                // reset the items list
+                collectedItems.Clear();
+            }
+           
         }
 
         if (other.gameObject.tag == nestTag)
