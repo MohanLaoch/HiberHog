@@ -22,12 +22,40 @@ public class Enemy : MonoBehaviour
     public bool PlayerInSightRange;
     public bool FoodInSightRange;
 
+    public string foodTag = "Food";
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
+    private void Start()
+    {
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    }
 
+    public void UpdateTarget()
+    {
+        GameObject[] foods = GameObject.FindGameObjectsWithTag(foodTag);
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestFood = null;
+
+
+        foreach (GameObject food in foods)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, food.transform.position);
+            if(distanceToEnemy > shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestFood = food;
+            }
+        }
+
+        if(nearestFood != null && shortestDistance <= sightRange)
+        {
+            food = nearestFood.transform;
+        }
+    }
     private void Update()
     {
         PlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, Player);
@@ -47,8 +75,9 @@ public class Enemy : MonoBehaviour
         {
             ChaseFood();
         }
-        
 
+        if (food == null)
+            return;
 
     }
 
@@ -106,5 +135,10 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(transform.position, sightRange);
     }
+
+    /*ok so the main problem is that the ai only has one food transform that it can chase and collect when it needs to be able to
+     * chase any of the food in the scene. one thing i can do is make a list of all the food transforms in the scene and manually click and drag.
+     * another method is to have the enemy chase the closest food transform after it hits the player 
+     */
 
 }
