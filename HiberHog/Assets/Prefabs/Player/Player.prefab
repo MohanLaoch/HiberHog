@@ -443,17 +443,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf535b19f16d1b4b88a6ee656f414f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 1528096182295891065}
   speed: 5
   RotSpeed: 100
   DashForce: 1
-  rb: {fileID: 1528096182295891065}
+  dashCooldownTime: 5
   shieldTimer: 1
+  shieldCooldownTime: 5
   knockBack: 100
   hog: {fileID: 3855539977450751709}
   shieldHog:
   - {fileID: 8637408841464781174}
   - {fileID: 8245835413141750579}
   isShielding: 0
+  shieldCooldown: {fileID: 0}
+  dashCooldown: {fileID: 0}
+  shieldText: {fileID: 0}
+  dashText: {fileID: 0}
 --- !u!114 &1528096182295891335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,6 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1528096182295891064}
+  foodText: {fileID: 0}
   foodTag: Food
   enemyTag: Enemy
   nestTag: Nest
