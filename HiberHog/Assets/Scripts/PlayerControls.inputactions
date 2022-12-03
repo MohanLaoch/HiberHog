@@ -214,6 +214,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "FlippedOver",
+            "id": "ca4432ce-a2ed-4e8a-9d99-18bcf6d6414a",
+            "actions": [
+                {
+                    "name": "Flip",
+                    "type": "Button",
+                    "id": "5bce2775-e42d-4194-bb0c-20c61411ea16",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "83acad21-3201-45f3-978a-98c5c693f31c",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

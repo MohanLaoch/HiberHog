@@ -236,6 +236,34 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""FlippedOver"",
+            ""id"": ""ca4432ce-a2ed-4e8a-9d99-18bcf6d6414a"",
+            ""actions"": [
+                {
+                    ""name"": ""Flip"",
+                    ""type"": ""Button"",
+                    ""id"": ""5bce2775-e42d-4194-bb0c-20c61411ea16"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""83acad21-3201-45f3-978a-98c5c693f31c"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Flip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -249,6 +277,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Zoom = m_Player.FindAction("Zoom", throwIfNotFound: true);
+        // FlippedOver
+        m_FlippedOver = asset.FindActionMap("FlippedOver", throwIfNotFound: true);
+        m_FlippedOver_Flip = m_FlippedOver.FindAction("Flip", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -385,6 +416,39 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // FlippedOver
+    private readonly InputActionMap m_FlippedOver;
+    private IFlippedOverActions m_FlippedOverActionsCallbackInterface;
+    private readonly InputAction m_FlippedOver_Flip;
+    public struct FlippedOverActions
+    {
+        private @PlayerControls m_Wrapper;
+        public FlippedOverActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Flip => m_Wrapper.m_FlippedOver_Flip;
+        public InputActionMap Get() { return m_Wrapper.m_FlippedOver; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(FlippedOverActions set) { return set.Get(); }
+        public void SetCallbacks(IFlippedOverActions instance)
+        {
+            if (m_Wrapper.m_FlippedOverActionsCallbackInterface != null)
+            {
+                @Flip.started -= m_Wrapper.m_FlippedOverActionsCallbackInterface.OnFlip;
+                @Flip.performed -= m_Wrapper.m_FlippedOverActionsCallbackInterface.OnFlip;
+                @Flip.canceled -= m_Wrapper.m_FlippedOverActionsCallbackInterface.OnFlip;
+            }
+            m_Wrapper.m_FlippedOverActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Flip.started += instance.OnFlip;
+                @Flip.performed += instance.OnFlip;
+                @Flip.canceled += instance.OnFlip;
+            }
+        }
+    }
+    public FlippedOverActions @FlippedOver => new FlippedOverActions(this);
     public interface IPlayerActions
     {
         void OnHorizontal(InputAction.CallbackContext context);
@@ -394,5 +458,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnRotate(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
+    }
+    public interface IFlippedOverActions
+    {
+        void OnFlip(InputAction.CallbackContext context);
     }
 }
