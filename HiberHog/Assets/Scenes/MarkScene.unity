@@ -40264,13 +40264,13 @@ MonoBehaviour:
   sounds:
   - name: ForestAmbience
     clip: {fileID: 8300000, guid: efb0f7c4959757349b6991f6634e25dd, type: 3}
-    volume: 0.6
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Music
     clip: {fileID: 8300000, guid: af5999c3b3b5e3b49bbba7e76a5966b1, type: 3}
-    volume: 0.6
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
