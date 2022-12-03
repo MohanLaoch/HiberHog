@@ -99,7 +99,8 @@ public class PlayerScript : MonoBehaviour
 
        // transform.Translate(speed * x * Time.deltaTime, 0, 0);
         transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * rotateDirection);
-        transform.Translate(0, 0, speed * z * Time.deltaTime);
+        transform.Translate(0, 0, speed * z * Time.deltaTime);      
+        
 
     }
 
@@ -134,6 +135,7 @@ public class PlayerScript : MonoBehaviour
             shieldCooldownTimer = shieldCooldownTime;
 
             StartCoroutine(Shield());
+            FindObjectOfType<AudioManager>().Play("Shield");
         }
     }
 
