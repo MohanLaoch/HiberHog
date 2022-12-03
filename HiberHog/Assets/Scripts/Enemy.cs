@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
         foreach (GameObject food in foods)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, food.transform.position);
-            if(distanceToEnemy > shortestDistance)
+            if(distanceToEnemy < shortestDistance)
             {
                 shortestDistance = distanceToEnemy;
                 nearestFood = food;
@@ -55,9 +55,20 @@ public class Enemy : MonoBehaviour
         {
             food = nearestFood.transform;
         }
+        else
+        {
+            food = null;
+        }
     }
     private void Update()
     {
+      /*  if (food == null)
+            return;*/
+
+      //  ChaseFood();
+
+
+        
         PlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, Player);
         FoodInSightRange = Physics.CheckSphere(transform.position, sightRange, CollectedFood);
 
@@ -76,8 +87,7 @@ public class Enemy : MonoBehaviour
             ChaseFood();
         }
 
-        if (food == null)
-            return;
+        
 
     }
 
