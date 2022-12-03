@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ItemTracker : MonoBehaviour
@@ -15,13 +16,19 @@ public class ItemTracker : MonoBehaviour
 
     [Header("Items")]
     public int nestedFood;
-    public int maxItems;
+    public int foodGoal = 5;
+    public int maxItems = 5;
 
     public List<GameObject> collectedItems = new List<GameObject>();
 
     private void Update()
     {
         foodText.text = "Food:" + collectedItems.Count + "/" + maxItems;
+
+        if (nestedFood >= foodGoal)
+        {
+            SceneManager.LoadScene("MarkScene");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
