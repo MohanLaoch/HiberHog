@@ -123,7 +123,6 @@ public class PlayerScript : MonoBehaviour
             dashCooldownTimer = dashCooldownTime;
 
             rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
-            Debug.Log("dashing");
         }
         
     }
