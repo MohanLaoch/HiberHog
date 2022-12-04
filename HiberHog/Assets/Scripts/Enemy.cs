@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     private List <GameObject> Foods = new List <GameObject> ();
     public NavMeshAgent agent;
-    public Animator SquirrelAnim;
+    public Animator Anim;
 
     public Transform player;
     public Transform food;
@@ -69,17 +69,26 @@ public class Enemy : MonoBehaviour
 
         if (!PlayerInSightRange)
         {
+            StopAllCoroutines();
             Patrolling();
         }
 
         if (PlayerInSightRange)
         {
-            ChasePlayer();
+            StartCoroutine(ChasePlayer());
+            StopCoroutine(ChaseFood());
         }
 
         if(FoodInSightRange && PlayerInSightRange)
         {
-            ChaseFood();
+            StopAllCoroutines();
+            StartCoroutine(ChaseFood());
+        }
+
+        if(FoodInSightRange)
+        {
+            StopAllCoroutines();
+            StartCoroutine(ChaseFood());
         }
 
         
@@ -88,15 +97,18 @@ public class Enemy : MonoBehaviour
 
     private void Patrolling()
     {
-        SquirrelAnim.SetBool("IsRunning", false);
+        Anim.SetBool("IsRunning", false);
 
         if (!walkPointSet)
         {
+            Anim.SetBool("IsRunning", false);
             SearchWalkPoint();
         }
         if(walkPointSet)
         {
             agent.SetDestination(walkPoint);
+            Anim.SetBool("IsRunning", true);
+
         }
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
@@ -120,23 +132,37 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void ChasePlayer()
+   IEnumerator ChasePlayer()
     {
-        SquirrelAnim.SetBool("IsRunning", true);
-        agent.SetDestination(player.position);
         transform.LookAt(player);
+        yield return new WaitForSeconds(3f);
+
+
+        Anim.SetBool("IsRunning", true);
+        agent.SetDestination(player.position);
+        
+
+
 
     }
 
-    public void ChaseFood()
+    IEnumerator ChaseFood()
     {
 
-        SquirrelAnim.SetBool("IsRunning", true);
-        agent.SetDestination(food.position);
+        Anim.SetBool("IsRunning", false);
         transform.LookAt(food);
+
+
+
+        Anim.SetBool("IsRunning", true);
+        agent.SetDestination(food.position);
+        yield return new WaitForSeconds(0.5f);
+
+
+
     }
 
-    
+
 
     private void OnDrawGizmosSelected()
     {
