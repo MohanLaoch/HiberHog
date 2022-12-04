@@ -45,12 +45,16 @@ public class PlayerScript : MonoBehaviour
         shieldCooldown.fillAmount = 0.0f;
         dashText.gameObject.SetActive(false);
         dashCooldown.fillAmount = 0.0f;
+
+        playerControls.FlippedOver.Disable();
+
     }
 
     private void Awake()
     {
         playerControls = new PlayerControls();
         boxCol = this.gameObject.GetComponent<BoxCollider>();
+        
     }
 
     private void OnEnable()
@@ -65,6 +69,8 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
+
+        
 
         bool Shiftkey = playerControls.Player.Dash.ReadValue<float>() > 0.1f;
 
@@ -99,9 +105,8 @@ public class PlayerScript : MonoBehaviour
 
        // transform.Translate(speed * x * Time.deltaTime, 0, 0);
         transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * rotateDirection);
-        transform.Translate(0, 0, speed * z * Time.deltaTime);      
-        
-
+        transform.Translate(0, 0, speed * z * Time.deltaTime);  
+                
     }
 
     public void Dash()
