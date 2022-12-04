@@ -16007,6 +16007,18 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2853241394320219089, guid: 2dcf52c1d1227574abbf8877c60c22b8, type: 3}
+      propertyPath: m_Height
+      value: 2.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853241394320219089, guid: 2dcf52c1d1227574abbf8877c60c22b8, type: 3}
+      propertyPath: m_Radius
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853241394320219089, guid: 2dcf52c1d1227574abbf8877c60c22b8, type: 3}
+      propertyPath: m_BaseOffset
+      value: 1.18
+      objectReference: {fileID: 0}
     - target: {fileID: 2853241394320219090, guid: 2dcf52c1d1227574abbf8877c60c22b8, type: 3}
       propertyPath: m_Enabled
       value: 0
