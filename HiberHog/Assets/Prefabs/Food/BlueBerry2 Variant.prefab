@@ -43,7 +43,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.122285366, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8, b: 0, a: 1}
   m_Intensity: 8.99
   m_Range: 1.08
   m_SpotAngle: 30
@@ -108,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4246c3ae55fa68948bfed275f344319c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -59.85532
+      value: -83.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4246c3ae55fa68948bfed275f344319c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -116,7 +116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4246c3ae55fa68948bfed275f344319c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -145.53363
+      value: -140.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4246c3ae55fa68948bfed275f344319c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ea8e045e148953f41b7e8e4ff5977b8d, type: 2}
     - target: {fileID: 919132149155446097, guid: 4246c3ae55fa68948bfed275f344319c, type: 3}
       propertyPath: m_Name
-      value: BlueBerry2
+      value: BlueBerry2 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4246c3ae55fa68948bfed275f344319c, type: 3}
       propertyPath: m_TagString
@@ -216,3 +216,27 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.23
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2040499263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448496824164828206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f33b70fcf3bbd144a7fb82e647f3a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3038135048613962660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448496824164828206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f33b70fcf3bbd144a7fb82e647f3a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

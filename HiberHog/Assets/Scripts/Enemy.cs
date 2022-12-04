@@ -60,6 +60,8 @@ public class Enemy : MonoBehaviour
         {
             food = null;
         }
+
+
     }
     private void Update()
     {
@@ -134,6 +136,8 @@ public class Enemy : MonoBehaviour
 
    IEnumerator ChasePlayer()
     {
+        Anim.SetBool("IsRunning", false);
+
         transform.LookAt(player);
         yield return new WaitForSeconds(3f);
 
@@ -153,10 +157,10 @@ public class Enemy : MonoBehaviour
         transform.LookAt(food);
 
 
-
         Anim.SetBool("IsRunning", true);
         agent.SetDestination(food.position);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
+
 
 
 
@@ -167,7 +171,7 @@ public class Enemy : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, sightRange);
+        Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 
     /*ok so the main problem is that the ai only has one food transform that it can chase and collect when it needs to be able to
