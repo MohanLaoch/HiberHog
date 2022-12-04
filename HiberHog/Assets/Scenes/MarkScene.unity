@@ -7829,6 +7829,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 78455345e32c48c479cfa964c7466d02, type: 3}
+--- !u!95 &538215920 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 880290514367090578, guid: 78455345e32c48c479cfa964c7466d02, type: 3}
+  m_PrefabInstance: {fileID: 538215919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &539788291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9807,6 +9812,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2853241394320219088, guid: 2dcf52c1d1227574abbf8877c60c22b8, type: 3}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 1964268162}
     - target: {fileID: 2853241394320219088, guid: 2dcf52c1d1227574abbf8877c60c22b8, type: 3}
       propertyPath: food
       value: 
@@ -16068,6 +16077,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2853241394320219088, guid: 2dcf52c1d1227574abbf8877c60c22b8, type: 3}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 538215920}
     - target: {fileID: 2853241394320219088, guid: 2dcf52c1d1227574abbf8877c60c22b8, type: 3}
       propertyPath: food
       value: 
@@ -37943,7 +37956,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32344
+  m_Name: pb_Mesh401244
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -39470,7 +39483,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32182
+  m_Name: pb_Mesh401080
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -46610,6 +46623,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 69343041ba71509478ff17de7ffbeb58, type: 3}
+--- !u!95 &1964268162 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 811386724477207116, guid: 69343041ba71509478ff17de7ffbeb58, type: 3}
+  m_PrefabInstance: {fileID: 1964268161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1964310355
 PrefabInstance:
   m_ObjectHideFlags: 0
