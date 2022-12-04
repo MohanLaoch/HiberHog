@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 2853241394320219089}
+  Anim: {fileID: 0}
   player: {fileID: 0}
   food: {fileID: 0}
   Ground:
@@ -132,6 +133,7 @@ MonoBehaviour:
   sightRange: 10
   PlayerInSightRange: 0
   FoodInSightRange: 0
+  foodTag: Food
 --- !u!195 &2853241394320219089
 NavMeshAgent:
   m_ObjectHideFlags: 0
