@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     private List <GameObject> Foods = new List <GameObject> ();
     public NavMeshAgent agent;
+    public Animator SquirrelAnim;
 
     public Transform player;
     public Transform food;
@@ -62,12 +63,6 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
-      /*  if (food == null)
-            return;*/
-
-      //  ChaseFood();
-
-
         
         PlayerInSightRange = Physics.CheckSphere(transform.position, sightRange, Player);
         FoodInSightRange = Physics.CheckSphere(transform.position, sightRange, CollectedFood);
@@ -93,7 +88,9 @@ public class Enemy : MonoBehaviour
 
     private void Patrolling()
     {
-        if(!walkPointSet)
+        SquirrelAnim.SetBool("IsRunning", false);
+
+        if (!walkPointSet)
         {
             SearchWalkPoint();
         }
@@ -125,6 +122,7 @@ public class Enemy : MonoBehaviour
 
     private void ChasePlayer()
     {
+        SquirrelAnim.SetBool("IsRunning", true);
         agent.SetDestination(player.position);
         transform.LookAt(player);
 
@@ -132,8 +130,8 @@ public class Enemy : MonoBehaviour
 
     public void ChaseFood()
     {
-      
 
+        SquirrelAnim.SetBool("IsRunning", true);
         agent.SetDestination(food.position);
         transform.LookAt(food);
     }
