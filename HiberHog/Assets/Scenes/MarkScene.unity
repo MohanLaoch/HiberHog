@@ -1224,6 +1224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_8 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
@@ -1303,6 +1307,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
       propertyPath: m_Name
       value: DeadTree_9 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2916,6 +2924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_9 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
@@ -3168,6 +3180,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
       propertyPath: m_Name
       value: Flower_1_Clump (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -4170,6 +4186,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
       propertyPath: m_Name
       value: DeadTree_7 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -6114,6 +6134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_9 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
@@ -6202,7 +6226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 384795616}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ferns(Trees)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7349,6 +7373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -7774,6 +7802,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
       propertyPath: m_Name
       value: Flower_1_Clump
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -8645,6 +8677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_1_Clump (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
@@ -9285,6 +9321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -9854,6 +9894,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
       propertyPath: m_Name
       value: Flower_1_Clump (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -10534,6 +10578,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
       propertyPath: m_Name
       value: Flower_1_Clump (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -11833,6 +11881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_1_Clump (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
@@ -11900,6 +11952,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
       propertyPath: m_Name
       value: DeadTree_8 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -13007,6 +13063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_1_Clump (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
@@ -13074,6 +13134,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
       propertyPath: m_Name
       value: DeadTree_7 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -13560,6 +13624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_8 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
@@ -13828,6 +13896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_9 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
@@ -13895,6 +13967,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
       propertyPath: m_Name
       value: DeadTree_7 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -15136,6 +15212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_8 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
@@ -15295,6 +15375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -15442,6 +15526,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
       propertyPath: m_Name
       value: DeadTree_9 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -33486,6 +33574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -36166,6 +36258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -36634,6 +36730,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
       propertyPath: m_Name
       value: DeadTree_8 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -38183,6 +38283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_8 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
@@ -38597,7 +38701,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26330
+  m_Name: pb_Mesh694250
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -38963,6 +39067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_1_Clump (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
@@ -39309,6 +39417,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
       propertyPath: m_Name
       value: DeadTree_8 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -40618,6 +40730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_1_Clump (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
@@ -41046,6 +41162,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
       propertyPath: m_Name
       value: DeadTree_7 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -41950,6 +42070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_1_Clump (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
@@ -42182,6 +42306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_8 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d89263a37baa59542aea583d37ce7b1b, type: 3}
@@ -42362,6 +42490,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
       propertyPath: m_Name
       value: Flower_1_Clump (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -43173,6 +43305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_1_Clump (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
@@ -43342,6 +43478,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
       propertyPath: m_Name
       value: Flower_1_Clump (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65a8375c8a7e6be438da042098ccaeba, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -44457,6 +44597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_9 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
@@ -44678,6 +44822,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -44884,7 +45032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1810265456}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45449,6 +45597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -45873,6 +46025,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
       propertyPath: m_Name
       value: DeadTree_9 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -48693,6 +48849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -49854,6 +50014,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_7 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
@@ -50666,6 +50830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadTree_9 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b96dc3cfe7c338141b2a387aef00c3e9, type: 3}
@@ -51223,6 +51391,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
       propertyPath: m_Name
       value: DeadTree_7 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ae529f210071cb4eb333d88af9f3502, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
