@@ -53,8 +53,11 @@ public class ItemTracker : MonoBehaviour
         {
             if (player.isShielding == true)
             {
-                Rigidbody enemyRb = other.gameObject.GetComponent<Rigidbody>();
-                enemyRb.AddForce(transform.up * player.knockBack);
+                //Rigidbody enemyRb = other.gameObject.GetComponent<Rigidbody>();
+                //enemyRb.AddForce(transform.up * player.knockBack);
+
+                // I hate everything, but I hope this works :(
+                other.gameObject.transform.Translate(Random.Range(-3, 3), 0, Random.Range(-3, 3));
 
             }
             else
