@@ -52,6 +52,7 @@ public class ItemTracker : MonoBehaviour
         {
             if (player.isShielding == true)
             {
+                Debug.Log("shielding");
                 //Rigidbody enemyRb = other.gameObject.GetComponent<Rigidbody>();
                 //enemyRb.AddForce(transform.up * player.knockBack);
 

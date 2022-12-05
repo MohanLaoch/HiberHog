@@ -215,6 +215,6 @@ public class PlayerScript : MonoBehaviour
 
         playerControls.Enable();
 
-        isShielding = true;
+        isShielding = false;
     }
 }
