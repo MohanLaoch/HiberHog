@@ -59,6 +59,9 @@ public class ItemTracker : MonoBehaviour
                 // I hate everything, but I hope this works :(
                 other.gameObject.transform.Translate(Random.Range(-3, 3), 0, Random.Range(-3, 3));
 
+                // or brute force teleport the fucker
+                //other.gameObject.transform.position += new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3));
+
             }
             else
             {
