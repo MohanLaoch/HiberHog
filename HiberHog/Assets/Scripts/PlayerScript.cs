@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -39,6 +40,11 @@ public class PlayerScript : MonoBehaviour
     public TMP_Text shieldText;
     public TMP_Text dashText;
 
+    public void RestartScene()
+    {
+        SceneManager.LoadScene("MarkScene");
+    }
+
     private void Start()
     {
         shieldText.gameObject.SetActive(false);
@@ -69,8 +75,13 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
+        bool Reset = playerControls.Player.Reset.ReadValue<float>() > 0.1f;
 
-        
+        if (Reset)
+        {
+            RestartScene();
+        }
+
 
         bool Shiftkey = playerControls.Player.Dash.ReadValue<float>() > 0.1f;
 

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ItemTracker : MonoBehaviour
@@ -9,13 +8,14 @@ public class ItemTracker : MonoBehaviour
     public PlayerScript player;
 
     public TMP_Text foodText;
+    public TMP_Text toCollectText;
 
     public string foodTag, enemyTag, nestTag;
 
     public float spawnRadius = 1f;
 
     [Header("Items")]
-    public int nestedFood;
+    public int nestedFood = 0;
     public int foodGoal = 5;
     public int maxItems = 5;
 
@@ -24,10 +24,11 @@ public class ItemTracker : MonoBehaviour
     private void Update()
     {
         foodText.text = "Food:" + collectedItems.Count + "/" + maxItems;
+        toCollectText.text = "Collected:" + nestedFood + "/" + foodGoal;
 
         if (nestedFood >= foodGoal)
         {
-            SceneManager.LoadScene("MarkScene");
+            player.RestartScene();
         }
     }
 
