@@ -1,7 +1,7 @@
 using Cinemachine;
 using UnityEngine;
 
-namespace GenshinImpactMovementSystem
+namespace CamZoom
 {
     public class CameraZoom : MonoBehaviour
     {
@@ -23,6 +23,8 @@ namespace GenshinImpactMovementSystem
             inputProvider = GetComponent<CinemachineInputProvider>();
 
             currentTargetDistance = defaultDistance;
+
+            Cursor.visible = false;
         }
 
         private void Update()
