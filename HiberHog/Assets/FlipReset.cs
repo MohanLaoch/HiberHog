@@ -9,7 +9,7 @@ public class FlipReset : MonoBehaviour
     {
         if(other.gameObject.layer == 3)
         {
-            PlayerTransform.transform.rotation = Quaternion.Euler(0, 0, 0);
+            PlayerTransform.transform.rotation = Quaternion.Euler(PlayerTransform.rotation.x, PlayerTransform.rotation.y, 0);
         }
     }
 }
