@@ -6,7 +6,6 @@ using TMPro;
 public class ItemTracker : MonoBehaviour
 {
     public PlayerScript player;
-
     public TMP_Text foodText;
     public TMP_Text toCollectText;
 
@@ -57,10 +56,10 @@ public class ItemTracker : MonoBehaviour
                 //enemyRb.AddForce(transform.up * player.knockBack);
 
                 // I hate everything, but I hope this works :(
-                other.gameObject.transform.Translate(Random.Range(-3, 3), 0, Random.Range(-3, 3));
+                other.gameObject.transform.Translate(Random.Range(3, 5), 0, Random.Range(3, 5));
 
                 // or brute force teleport the fucker
-                //other.gameObject.transform.position += new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3));
+                //other.gameObject.transform.position += new Vector3(Random.Range(3, 5), 0, Random.Range(3, 5));
 
             }
             else
