@@ -84,7 +84,15 @@ public class ItemTracker : MonoBehaviour
         if (other.gameObject.tag == nestTag)
         {
             // take the amount of items in the list and add to nest item amount 
-            nestedFood = collectedItems.Count;
+            if(collectedItems.Count == 0)
+            {
+                nestedFood = nestedFood;
+            }
+            else
+            {
+                nestedFood = nestedFood + collectedItems.Count; 
+            }
+           
 
             for (int j = 0; j < collectedItems.Count; j++)
             {
