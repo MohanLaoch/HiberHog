@@ -84,6 +84,7 @@ public class Enemy : MonoBehaviour
         if(FoodInSightRange && PlayerInSightRange)
         {
             StopAllCoroutines();
+            UpdateTarget();
             StartCoroutine(ChaseFood());
         }
 
